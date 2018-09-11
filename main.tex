@@ -1,0 +1,413 @@
+\documentclass[12pt]{article}
+% \pdfoutput=1
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{comment}
+
+%\usepackage{ifthen}
+\usepackage[sort&compress, numbers, merge]{natbib}
+
+    
+
+\setlength{\textwidth}{17.9cm}
+\setlength{\textheight}{23.0cm}
+\setlength{\oddsidemargin}{-0.5cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{0cm}
+\setlength{\topmargin}{-0.5cm}
+\setlength{\footskip}{1.5cm}
+
+
+
+\newcommand{\Slash}[1]{{\ooalign{\hfil/\hfil\crcr$#1$}}}
+\newcommand{\1}{\mbox{1}\hspace{-0.25em}\mbox{l}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%    remove the following commands when finalizing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\TODO#1{ \textcolor{red}{\textbf{ ($\clubsuit$ #1 $\clubsuit$)} }}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue,
+urlcolor=black]{hyperref} 
+
+
+\title{Yukawa Unification}
+                 
+\begin{document}
+\baselineskip 0.6cm
+
+\def\simgt{\mathrel{\lower2.5pt\vbox{\lineskip=0pt\baselineskip=0pt
+           \hbox{$>$}\hbox{$\sim$}}}}
+\def\simlt{\mathrel{\lower2.5pt\vbox{\lineskip=0pt\baselineskip=0pt
+           \hbox{$<$}\hbox{$\sim$}}}}
+\def\simprop{\mathrel{\lower3.0pt\vbox{\lineskip=1.0pt\baselineskip=0pt
+             \hbox{$\propto$}\hbox{$\sim$}}}}
+\def\tr{\mathop{\rm tr}}
+\def\SU{\mathop{\rm SU}}
+
+\begin{titlepage}
+
+\begin{flushright}
+IPMU18-00** \\
+UT18
+\end{flushright}
+
+\vskip 1.1cm
+
+\begin{center}
+
+{\Large \bf 
+Yukawa Unification in Split Supersymmetry
+}
+
+\vskip 1.2cm
+So Chigusa$^1$,
+Takeo Moroi$^{1,2}$,
+Natsumi Nagata$^1$ and 
+Satoshi Shirai$^2$
+\vskip 0.5cm
+
+{\it
+{
+$^1$
+Department of Physics, Faculty of Science,
+The University of Tokyo, Bunkyo-ku, Tokyo 113-0033, Japan
+}\\
+{$^2$Kavli Institute for the Physics and Mathematics of the Universe (WPI), \\The University of Tokyo Institutes for Advanced Study, The University of Tokyo, Kashiwa
+ 277-8583, Japan}
+}
+
+
+\vskip 1.0cm
+
+\abstract{
+We study bottom-tau Yukawa unification in the minimal supersymmetric Standard Model.
+We focus on the parameter region where $\tan\beta \lesssim 1$ and found the Yukawa unification can be significantly improved.
+}
+
+\end{center}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:intro}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Yukawa Unification in MSSM}
+\label{sec:Yukawa_MSSM}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Higgs Mass}
+In the MSSM, small $\tan\beta$ usually leads to small Higgs mass.
+If the sfermion mass scale is very high, we can get the Higgs mass large enough.
+
+
+Model point? split susy?, heavy susy?
+
+
+\subsection{Threshold Correction and RGE running of Yukawa}
+
+Although we use two or higher loop RGEs in our numerical analysis, here
+we show some important one-loop beta functions to qualitatively discuss
+the $b$-$\tau$ unification in our set up.  One-loop beta functions relevant
+for the $b$-$\tau$ unification differ below and above the susy scale
+$M_S$.  Below $M_S$, we adopt SM ($+$gaugino) beta functions,
+\begin{align}
+ \beta_{\tilde{y}_t} &= \frac{\tilde{y}_t}{16\pi^2} \left[ \frac{9}{2}
+ \tilde{y}_t^2 + \frac{3}{2} \tilde{y}_b^2 + \tilde{y}_\tau^2 - 8g_3^2 -
+ \frac{9}{4} g_2^2 - \frac{17}{20} g_1^2 \right],\\
+ \beta_{\tilde{y}_b} &= \frac{\tilde{y}_b}{16\pi^2} \left[ \frac{3}{2}
+ \tilde{y}_t^2 + \frac{9}{2} \tilde{y}_b^2 + \tilde{y}_\tau^2 - 8g_3^2
+ - \frac{9}{4} g_2^2 - \frac{1}{4} g_1^2 \right],\\
+ \beta_{\tilde{y}_\tau} &= \frac{\tilde{y}_\tau}{16\pi^2} \left[
+ 3\tilde{y}_t^2 + 3\tilde{y}_b^2 + \frac{5}{2} \tilde{y}_\tau^2 -
+ \frac{9}{4} g_2^2 - \frac{9}{4} g_1^2 \right],
+\end{align}
+where $\tilde{y}_{t,b,\tau}$ are SM Yukawa couplings in the
+$\overline{\rm MS}$ scheme.  On the other hand, above $M_S$, we use MSSM
+beta functions,
+\begin{align}
+ \beta_{y_t} &= \frac{y_t}{16\pi^2} \left[ 6y_t^2 + y_b^2 - \frac{16}{3}
+ g_3^2 - 3g_2^2 - \frac{13}{15} g_1^2 \right],\label{eq_beta_yt}\\
+ \beta_{y_b} &= \frac{y_b}{16\pi^2} \left[ y_t^2 + 6y_b^2 + y_\tau^2 -
+ \frac{16}{3} g_3^2 - 3g_2^2 - \frac{7}{15} g_1^2 \right],\label{eq_beta_yb} \\
+ \beta_{y_\tau} &= \frac{y_\tau}{16\pi^2} \left[ 3y_b^2 + 4y_\tau^2 -
+ 3g_2^2 - \frac{9}{5} g_1^2 \right],\label{eq_beta_ytau}
+\end{align}
+where $y_{t,b,\tau}$ denote MSSM Yukawa couplings in the
+$\overline{\rm DR}$ scheme.
+
+At the matching scale $M_S$, Yukawa couplings $\tilde{y}$ and $y$ are
+matched with each other.  Tree-level matching conditions are given by
+\begin{align}
+ \tilde{y}_t (M_S) &= y_t (M_S) \sin \beta,\label{eq_yt_matching}\\
+ \tilde{y}_b (M_S) &= y_b (M_S) \cos \beta, \\
+ \tilde{y}_\tau (M_S) &= y_\tau (M_S) \cos \beta. 
+\end{align}
+It is Eq.~\eqref{eq_yt_matching} and the positive sign of the first term
+of Eq.~\eqref{eq_beta_yt} that explain the fact that the $y_t$ value at
+the GUT scale tends to become large, sometimes about to blow up, when
+$\tan \beta$ is small.  If this is the case, according to
+Eq.~\eqref{eq_beta_yb} and Eq.~\eqref{eq_beta_ytau}, $y_b$ also becomes
+large at the higher scale thanks to the large $y_t$, while $y_\tau$
+is not enhanced.  This can affect the $b$-$\tau$ unification, as we
+will mention later.
+
+At the next-to-leading order level, Yukawa couplings, in particular
+$y_b$, acquires a possibly significant effect through a threshold
+correction.  The most important part of such a correction can be denoted
+as
+\begin{align}
+ \tilde{y}_b (M_S) &= y_b (M_S) \cos \beta (1 + \Delta_b),\\
+ \Delta_b &\simeq \left[ \frac{g_3^2}{6\pi^2} M_3 I(m_{\tilde{b}_1}^2,
+ m_{\tilde{b}_2^2}, M_3^2) + \frac{y_t^2}{16\pi^2} A_t
+ I(m_{\tilde{t}_1}^2, m_{\tilde{t}_2}^2, \mu^2) \right] \mu \tan \beta,\label{eq_delb}
+\end{align}
+where the loop function $I$ is defined by
+\begin{align}
+ I(a, b, c) \equiv - \frac{ab \ln(a/b) + bc \ln(b/c) + ca
+ \ln(c/a)}{(a-b) (b-c) (c-a)}.
+\end{align}
+Since the correction Eq.~\eqref{eq_delb} is proportional to $\tan
+\beta$, 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Minimal Model}
+\label{sec:Minimal}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We consider the minimal SU(5) GUT model.
+
+\subsection{Minimal Split SUSY}
+Here we discuss the ``minimal" model for the split SUSY spectrum.
+We assume that the SUSY breaking field $X$ is charged under some symmetry.
+In this case, there is no direct coupling between the SUSY breaking field and the gauge supermultiplet like $X W^{a} W^{a}$.
+The sfermion mass comes from the effective K\"ahler potential as:
+\begin{align}
+    K \ni -\frac{c}{M^2_{*}} X X^{\dagger} \Phi \Phi^{\dagger},
+\end{align}
+where $\Phi$ is matter chiral multiplets. 
+With SUSY breaking effect $\langle X \rangle = F \theta^2$, the sfermion gets mass of $c |F|^2/M_*^2$.
+If the cutoff scale is $M_*$ is close to the Planck scale $M_P$, the sfermion masses are comparable to the gravtino mass $m_{3/2} = {F}/{\sqrt{3}M_P}$.
+
+The gaugino masses mainly come from the anomaly mediation effect and the thereshold correction from the Higgsino and Higgs loop.
+\begin{align}
+  M_1 &= \frac{3}{5} \frac{\alpha_1}{4\pi} (11 m_{3/2} + L),\\
+  M_2 &= \frac{\alpha_2}{4\pi} (m_{3/2} + L),\\
+  M_3 &= \frac{\alpha_3}{4\pi} (-3 m_{3/2}),
+\end{align}
+where $L$ represents the Higgsino-Higgs theashold corrections:
+\begin{align}
+      L = \mu \sin(2\beta) \frac{m_A^2}{|\mu|^2 - m_A^2} 
+    \ln\frac{|\mu|^2}{m_A^2}.
+\end{align}
+In the present model, $L = O(m_{3/2})$ and we can tune the Wino mass light enough for the correct dark matter abundance.
+
+\subsection{Minimal GUT}
+
+We discuss the four dimensional minimal SUSY SU(5) GUT.
+ In this theory, the SU(5) symmetry 
+is broken by the VEV of $\Sigma(24)$.  The superpotential relevant 
+for the GUT breaking is
+%
+\begin{align}
+  W_\Sigma = \frac{m_\Sigma}{2} \mathrm{tr} \Sigma^2 
+    + \frac{\lambda_\Sigma}{3} \mathrm{tr} \Sigma^3,
+\label{eq:W_Sigma}
+\end{align}
+%
+leading to $\langle \Sigma \rangle = v \cdot 
+\mathrm{diag}(2,2,2,-3,-3)$ with $v = m_\Sigma/\lambda_\Sigma$. 
+The superpotential for the Higgs fields, $H_5 = (H_C, H_u)$ 
+and $\bar{H}_5 = (\bar{H}_C, H_d)$, is given by
+%
+\begin{align}
+  W_H = \bar{H}_5 ( m_H + \lambda_H \Sigma ) H_5.
+\label{eq:W_H}
+\end{align}
+
+
+With non-zero $\Sigma$ VEV, the vector multiplet is decomposed as
+\begin{align}
+ {\cal V}=\frac{1}{\sqrt{2}}
+\begin{pmatrix}
+ \begin{matrix}
+G  -\frac{2}{\sqrt{30}} B
+ \end{matrix}
+&
+\begin{matrix}
+X^{\dagger 1} \\
+X^{\dagger 2} \\
+X^{\dagger 3}
+\end{matrix}
+&
+\begin{matrix}
+ Y^{\dagger 1}\\ Y^{\dagger 2} \\ Y^{\dagger 3}
+\end{matrix}
+\\
+\begin{matrix}
+ X_1 & X_2 & X_3 \\
+ Y_1 & Y_2 & Y_3  
+\end{matrix}
+&
+\begin{matrix}
+ \frac{1}{\sqrt{2}}W^3+\frac{3}{\sqrt{30}}B \\ W^-
+\end{matrix}
+&
+\begin{matrix}
+W^+ \\ - \frac{1}{\sqrt{2}}W^3+\frac{3}{\sqrt{30}}B
+\end{matrix}
+\end{pmatrix}
+~.
+\end{align} 
+The mass of $X$ gauge multiplet $ (-5/6, 2, 3)+ (5/6, 2, \bar{3})$ is
+\begin{align}
+m_X = 5 \sqrt{5} g_5 v.
+\end{align}
+The adjoint $\Sigma$ is decomposed into Goldstone, SM adjoint  $(0,1,8), (0,3,1)$ and singlet multiplets.
+\begin{align}
+\Sigma - \langle \Sigma  \rangle =
+\begin{pmatrix}
+ \Sigma_{8}& \frac{1}{\sqrt{2}}\Gamma_{(3,2)} \\
+ \frac{1}{\sqrt{2}}\Gamma^{c}_{(3^*,2)} & \Sigma_3
+\end{pmatrix}
++\frac{1}{2\sqrt{15}}
+\begin{pmatrix}
+ 2&0\\0&-3
+\end{pmatrix}
+\Sigma_{1}~.
+\end{align}
+ The masses are 
+\begin{align}
+  m_{\Sigma_8} =  m_{\Sigma_3} = \frac{5}{2}\lambda_{\Sigma} v
+\qquad
+  m_{\Sigma_1} = \frac{1}{2}\lambda_{\Sigma} v
+\label{eq:mu-GUT}
+\end{align}
+
+%
+With the $\Sigma$ VEV, the supersymmetric masses for the 
+MSSM Higgs doublets $H_{u,d}$ and their GUT partners $H_C, \bar{H}_C$:
+%
+\begin{align}
+  \mu = m_H - 3 \lambda_H v,
+\qquad
+  \mu_C = m_H + 2 \lambda_H v.
+\label{eq:mu-GUT}
+\end{align}
+
+
+\subsubsection{GUT and Matching}
+At one loop level, relations between MSSM and GUT gauge couplings are
+\begin{align}
+ \frac{1}{g_1^2(Q)}&=\frac{1}{g_5^2(Q)}+\frac{1}{8\pi^2}\biggl[
+\frac{2}{5}
+\ln \frac{Q}{M_{H_C}}-10\ln\frac{Q}{M_X}
+\biggr]~,\nonumber \\
+ \frac{1}{g_2^2(Q)}&=\frac{1}{g_5^2(Q)}+\frac{1}{8\pi^2}\biggl[
+2\ln \frac{Q}{M_\Sigma}-6\ln\frac{Q}{M_X}
+\biggr]~,\nonumber \\
+ \frac{1}{g_3^2(Q)}&=\frac{1}{g_5^2(Q)}+\frac{1}{8\pi^2}\biggl[
+\ln \frac{Q}{M_{H_C}}+3\ln \frac{Q}{M_\Sigma}-4\ln\frac{Q}{M_X}
+\biggr]~.
+\end{align}
+Here $g_{1,2,3}$ are the MSSM $\overline{\rm DR}$ gauge couplings and $g_5$ is the
+GUT $\overline{\rm DR}$ gauge coupling, which are mass-independently defined.
+From the aligns we have
+\begin{align}
+\sqrt{14} R_H \equiv \frac{3}{g_2^2(Q)}- \frac{2}{g_3^2(Q)}- \frac{1}{g_1^2(Q)}
+&=-\frac{3}{10\pi^2}\ln \frac{Q}{M_{H_C}}~, \nonumber \\
+\sqrt{32} R_X \equiv \frac{5}{g_1^2(Q)}- \frac{3}{g_2^2(Q)}- \frac{2}{g_3^2(Q)}
+&=-\frac{3}{2\pi^2}\ln \frac{Q^3}{M_X^2M_{\Sigma}}~.
+\label{conditions}
+\end{align}
+The zero points predict the mass scale of GUT particles.
+
+\subsubsection{With higher dimensional contributions}
+The GUT scale (maybe  $\sim 10^{16-17}$ GeV) is close to the cut-off scale e.g., the Planck scale $M_P = 2\times 10^{18}$ GeV.
+In this case, we may expect the corrections from higher dimensional operators also contribute the gauge couplings.
+The dominant contributions come from 
+\begin{align}
+  {\cal L} \supset \frac{1}{2 g^2} \int d^2\theta\, 
+      \left\{ {\rm Tr}[{\cal W}^\alpha {\cal W}_\alpha] 
+    + \frac{a}{\Lambda} {\rm Tr}[\Sigma {\cal W}^\alpha {\cal W}_\alpha] 
+    + \frac{b}{\Lambda^2}{\rm Tr}[\Sigma {\cal W}^\alpha ] {\rm Tr}[\Sigma {\cal W}_\alpha ]
+     \right\}
+    + {\rm h.c.},
+\label{eq:threshold}
+\end{align}
+With developing $\Sigma$ VEV, the relation of the gauge couplings are modified,
+\begin{align}
+\Delta R_H = -\frac{6\sqrt{2}a}{\sqrt{7}g_5^2} \frac{v}{\Lambda} \simeq 1.1 a \times \frac{m_X}{\Lambda}
+,\qquad
+\Delta R_X = \frac{20\sqrt{5}b}{ \sqrt{38}g_5^2} \frac{v^2}{\Lambda^2}
+\simeq 0.2 b \times\frac{m_X^2}{\Lambda^2}
+\end{align}
+The leading dimension-five operator (the second term above) gives 
+a correction to $R_H$, but not to $R_X$. The $R_X$ is corrected only at 
+order $\langle \Sigma \rangle^2/\Lambda^2$, which is small.  We can, 
+therefore, read off the mass of the $XY$ gauge boson, $M_X \approx 
+\langle \Sigma \rangle$, by the points of $R_X$,
+%
+\begin{align}
+  R_X(M_X) \approx 0.
+\label{eq:R_X-M_X}
+\end{align}
+%
+On the other hand, since $R_H$ receives a relatively large correction from 
+the dimension-five operator, it does not strongly constrain $M_{H_C}$---any 
+value of $M_{H_C}$ is consistent as long as $R_H$ at that scale is reasonably 
+small
+%
+\begin{align}
+  \left| R_H(M_{H_C}) \right| 
+  \approx \left| -\frac{a v}{\Lambda} \right| 
+\label{eq:R_H-M_H}
+\end{align}
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion and discussion}
+\label{sec:conclusion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Acknowledgments}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+This work is supported by Grant-in-Aid for Scientific Research from the
+Ministry of Education, Culture, Sports, Science, and Technology (MEXT),
+Japan, No. 17H02878 and 18K13535 (S.S.) and by World Premier
+International Research Center Initiative (WPI), MEXT, Japan (S.S.).
+This work was also supported by JSPS KAKENHI Grant, No. 17J00813 (S.C)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section*{Appendix}
+%\appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%% References %%%%%%%%%%%%%%%%%%%
+\bibliographystyle{aps}
+\bibliography{ref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
